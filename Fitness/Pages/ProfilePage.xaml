@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fitness.Pages.ProfilePage"
+             xmlns:lang="clr-namespace:Fitness.Resources.Lenguages"
+             Title="{x:Static lang:Localisation.Profile}">
+    <VerticalStackLayout Padding="8" Spacing="8">
+        <Frame>
+            <VerticalStackLayout HorizontalOptions="FillAndExpand" Spacing="8">
+                <Label x:Name="NameText" Text="Some name" HorizontalOptions="Center" FontSize="Large"/>
+                <Label x:Name="CityText" Text="Some city" HorizontalOptions="Center" FontSize="Small"/>
+                <Label x:Name="DescriptionText" Text="Some description" HorizontalOptions="Center" FontSize="Medium"/>
+                <StackLayout HorizontalOptions="FillAndExpand" Spacing="8" Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="Start">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Subscriptions_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="{x:Static lang:Localisation.Subscriptions}" FontSize="Small"/>
+                        <Label x:Name="SubscriptionsCount" Text="100" FontSize="Medium"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Start">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Subscribers_Tapped"/>
+                        </StackLayout.GestureRecognizers>
+                        <Label Text="{x:Static lang:Localisation.Subscribers}" FontSize="Small"/>
+                        <Label x:Name="SubscribersCount" Text="100" FontSize="Medium"/>
+                    </StackLayout>
+                    <Button Clicked="Button_Clicked" Text="{x:Static lang:Localisation.Edit_button}" HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
+            </VerticalStackLayout>
+        </Frame>
+        <Frame>
+            <VerticalStackLayout HorizontalOptions="FillAndExpand" Spacing="8">
+                <Label Text="{x:Static lang:Localisation.Statistics_title}" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+                <StackLayout HorizontalOptions="CenterAndExpand" Spacing="8" Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="{x:Static lang:Localisation.Distance}" FontSize="Small"/>
+                        <Label x:Name="DistanceCount" Text="100" FontSize="Medium"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="{x:Static lang:Localisation.Time}" FontSize="Small"/>
+                        <Label x:Name="TimeCount" Text="100" FontSize="Medium"/>
+                    </StackLayout >
+                    <StackLayout HorizontalOptions="FillAndExpand">
+                        <Label Text="{x:Static lang:Localisation.Height}" FontSize="Small"/>
+                        <Label x:Name="HeightCount" Text="100" FontSize="Medium"/>
+                    </StackLayout>
+                </StackLayout>
+            </VerticalStackLayout>
+        </Frame>
+        <Frame>
+            <VerticalStackLayout HorizontalOptions="FillAndExpand" Spacing="8">
+                <Label Text="{x:Static lang:Localisation.Media}" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

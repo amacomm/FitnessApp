@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fitness.Pages.RecordsPage"
+             xmlns:lang="clr-namespace:Fitness.Resources.Lenguages"
+             Title="{x:Static lang:Localisation.Records}">
+    <StackLayout VerticalOptions="FillAndExpand" Padding="8" Spacing="24">
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="{x:Static lang:Localisation.Time}" HorizontalOptions="CenterAndExpand"/>
+            <Label x:Name="TimeText" Text="00:00:00" FontSize="32" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+            <Label Text="{x:Static lang:Localisation.Speed}" HorizontalOptions="CenterAndExpand" VerticalOptions="End"/>
+            <Label x:Name="SpeedText" Text="0.0" FontSize="32" HorizontalOptions="CenterAndExpand" VerticalOptions="End"/>
+            <Label Text="{x:Static lang:Localisation.km_h}" HorizontalOptions="CenterAndExpand" VerticalOptions="End"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+            <Label Text="{x:Static lang:Localisation.Distance}" HorizontalOptions="CenterAndExpand" VerticalOptions="End"/>
+            <Label x:Name="DistanceText" Text="0.0" FontSize="32" HorizontalOptions="CenterAndExpand" VerticalOptions="End"/>
+            <Label Text="{x:Static lang:Localisation.km}" HorizontalOptions="CenterAndExpand" VerticalOptions="End"/>
+        </StackLayout>
+        <Button Text="{x:Static lang:Localisation.Start}"  FontSize="22" Clicked="Button_Clicked" HorizontalOptions="Center" Padding="8"/>
+    </StackLayout>
+</ContentPage>

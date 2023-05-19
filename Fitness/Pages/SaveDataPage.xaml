@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fitness.Pages.SaveDataPage"
+             xmlns:lang="clr-namespace:Fitness.Resources.Lenguages"
+             Title="{x:Static lang:Localisation.Save}">
+    <StackLayout Padding="8" Spacing="8">
+        <Entry Placeholder="{x:Static lang:Localisation.TrainingNamePlaceholder}"/>
+        <Entry Placeholder="{x:Static lang:Localisation.TrainingDescriptionPlaceholder}"/>
+        <Picker x:Name="typePicker" SelectedIndex="0">
+            <Picker.Items>
+                <x:String>Cycling</x:String>
+                <x:String>Walking</x:String>
+                <x:String>Runing</x:String>
+            </Picker.Items>
+        </Picker>
+        <Button  Text="{x:Static lang:Localisation.Save}" Clicked="Button_Clicked_1" HorizontalOptions="Center" BackgroundColor="{StaticResource Primary}" TextColor="{StaticResource onPrimary}"/>
+        <Button  Text="{x:Static lang:Localisation.Delete}" Clicked="Button_Clicked" HorizontalOptions="Center" BorderColor="{StaticResource Error}" BorderWidth="1" BackgroundColor="{StaticResource background}" TextColor="{StaticResource Error}"/>
+    </StackLayout>
+</ContentPage>

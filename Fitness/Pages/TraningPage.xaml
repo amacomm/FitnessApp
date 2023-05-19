@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fitness.Pages.TraningPage"
+             xmlns:lang="clr-namespace:Fitness.Resources.Lenguages">
+    <VerticalStackLayout HorizontalOptions="FillAndExpand" Padding="8" Spacing="8">
+        <StackLayout Orientation="Horizontal">
+            <StackLayout>
+                <Label x:Name="AuthorText" Text="Some guy"/>
+                <Label x:Name="DateText" Text="14.07.2022"/>
+            </StackLayout>
+        </StackLayout>
+        <Label x:Name="TraningNameText" Text="VeryGoodTraning" FontSize="Large"/>
+        <Label x:Name="TraningDescriptionText" Text="It was a very good traning"/>
+        <StackLayout HorizontalOptions="CenterAndExpand" Spacing="8" Orientation="Horizontal">
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="{x:Static lang:Localisation.Distance}" FontSize="Small"/>
+                <Label x:Name="DistanceCount" Text="100" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="{x:Static lang:Localisation.Speed}" FontSize="Small"/>
+                <Label x:Name="SpeedCount" Text="100" FontSize="Medium"/>
+            </StackLayout >
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Spacing="8" Orientation="Horizontal">
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="{x:Static lang:Localisation.Time}" FontSize="Small"/>
+                <Label x:Name="TimeCount" Text="100" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="{x:Static lang:Localisation.Height}" FontSize="Small"/>
+                <Label x:Name="HeightCount" Text="100" FontSize="Medium"/>
+            </StackLayout >
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fitness.Pages.TraningListPage"
+             xmlns:lang="clr-namespace:Fitness.Resources.Lenguages"
+             Title="{x:Static lang:Localisation.Traning}">
+    <RefreshView x:Name="refreshView" Refreshing="refreshView_Refreshing" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <CollectionView x:Name="collectionView" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="{StaticResource outlineVariant}"
+                       BackgroundColor="{StaticResource surface}"
+                        Margin="10,5"
+                       HorizontalOptions="FillAndExpand"
+                       >
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Frame.GestureRecognizers>
+                        <VerticalStackLayout>
+                            <HorizontalStackLayout>
+                                <Image />
+                                <VerticalStackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Center">
+                                    <Label Text="{Binding name}"/>
+                                    <Label Text="{Binding date}" />
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                            <Label Text="{Binding TrackName}"/>
+                            <HorizontalStackLayout>
+                                <VerticalStackLayout>
+                                    <Label Text="{x:Static lang:Localisation.Distance}"/>
+                                    <Label Text="{Binding Distance}"/>
+                                </VerticalStackLayout>
+                                <VerticalStackLayout>
+                                    <Label Text="{x:Static lang:Localisation.Speed}"/>
+                                    <Label Text="{Binding Speed}"/>
+                                </VerticalStackLayout>
+                                <VerticalStackLayout>
+                                    <Label Text="{x:Static lang:Localisation.Time}"/>
+                                    <Label Text="{Binding Time}"/>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                            <Label Text="{Binding Discription}"/>
+                            <HorizontalStackLayout HorizontalOptions="EndAndExpand">
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>

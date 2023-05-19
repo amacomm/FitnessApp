@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fitness.Pages.EditProfilePage"
+             xmlns:lang="clr-namespace:Fitness.Resources.Lenguages"
+             Title="{x:Static lang:Localisation.EditProfile}">
+    <VerticalStackLayout HorizontalOptions="FillAndExpand" Padding="8" Spacing="8">
+        <Label Text="{x:Static lang:Localisation.UserName}"/>
+        <Entry x:Name="UserNameEntry"/>
+        <Label Text="{x:Static lang:Localisation.UserDescription}"/>
+        <Entry x:Name="UserDescriptionEntry"/>
+        <Label Text="{x:Static lang:Localisation.Password}"/>
+        <Entry x:Name="UserPasswordEntry" IsPassword="True" Placeholder="********"/>
+        <Button Text="{x:Static lang:Localisation.Save}"   Clicked="Button_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

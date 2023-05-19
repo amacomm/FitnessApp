@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Fitness.Pages.AccountSetting"
+             xmlns:lang="clr-namespace:Fitness.Resources.Lenguages"
+             Title="{x:Static lang:Localisation.Account}">
+    <VerticalStackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Padding="8" Spacing="8">
+        <Entry x:Name="NameEntry" Placeholder="{x:Static lang:Localisation.Name}"/>
+        <Entry x:Name="SurnameEntry" Placeholder="{x:Static lang:Localisation.Surname}"/>
+        <DatePicker MinimumDate="01/01/1900"
+            MaximumDate="12/05/2023"
+            Date="01/01/2023" 
+                    x:Name="Date"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="{x:Static lang:Localisation.Man}" HorizontalOptions="FillAndExpand"/>
+            <Switch IsToggled="False" x:Name="SexSwitcher" HorizontalOptions="FillAndExpand"/>
+            <Label Text="{x:Static lang:Localisation.Woman}" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <Button Text="{x:Static lang:Localisation.Save}" Clicked="Button_Clicked" HorizontalOptions="Center" Padding="8"/>
+    </VerticalStackLayout>
+</ContentPage>
