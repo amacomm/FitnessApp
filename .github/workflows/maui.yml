@@ -41,4 +41,4 @@ jobs:
       run: dotnet test --configuration Release --no-build --verbosity normal
 
     - name: Publish
-      run: dotnet publish --framework net7.0-android --no-build --configuration Release --output ./publish
+      run: dotnet publish ./Fitness/Fitness.csproj --framework net7.0-android --no-build --configuration Release --output ./publish
