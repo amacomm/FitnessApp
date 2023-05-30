@@ -3,8 +3,6 @@ name: maui
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
@@ -18,7 +16,17 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '7.0.x'
-    
+        
+    - uses: actions/setup-java@v2
+      with:
+        distribution: 'microsoft'
+        java-version: '11'
+        
+    - name: Install MAUI Workloads
+      run: |
+        dotnet workload install android --ignore-failed-sources
+        dotnet workload install maui --ignore-failed-sources
+      
     - name: Restore dependencies
       run: dotnet restore
 
