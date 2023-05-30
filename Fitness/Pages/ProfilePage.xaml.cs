@@ -1,11 +1,28 @@
+using Fitness.Services;
+
 namespace Fitness.Pages;
 
 public partial class ProfilePage : ContentPage
 {
-	public ProfilePage()
+    private readonly IUsersService _usersService;
+
+	public ProfilePage() : this(MauiProgram.GetService<IUsersService>())
 	{
 		InitializeComponent();
-	}
+    }
+
+    public ProfilePage(IUsersService usersService)
+    {
+        _usersService = usersService;
+    }
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+
+        var users = await _usersService.ApiUsersGet();
+        SubscriptionsCount.Text = users.Count.ToString();
+    }
 
     private async void Button_Clicked(object sender, EventArgs e)
     {

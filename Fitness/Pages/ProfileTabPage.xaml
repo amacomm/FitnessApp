@@ -2,8 +2,9 @@
 <TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Fitness.Pages"
+             xmlns:lang="clr-namespace:Fitness.Resources.Lenguages"
              x:Class="Fitness.Pages.ProfileTabPage"
-             Title="ProfileTabPage">
+             Title="{x:Static lang:Localisation.Profile}">
     <local:ProfilePage/>
     <local:TraningListPage/>
 </TabbedPage>

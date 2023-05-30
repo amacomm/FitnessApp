@@ -130,7 +130,7 @@
     <value>Удалить тренировку</value>
   </data>
   <data name="Distance" xml:space="preserve">
-    <value>Растояние</value>
+    <value>Расстояние</value>
   </data>
   <data name="EditProfile" xml:space="preserve">
     <value>Редактирование профиля</value>
@@ -157,7 +157,7 @@
     <value>Мужчина</value>
   </data>
   <data name="Media" xml:space="preserve">
-    <value>Медия</value>
+    <value>Медиа</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Имя</value>
@@ -175,7 +175,7 @@
     <value>Запись</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>Зарегестрироваться</value>
+    <value>Зарегистрироваться</value>
   </data>
   <data name="Registration" xml:space="preserve">
     <value>Регистрация</value>
